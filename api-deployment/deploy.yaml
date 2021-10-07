@@ -19,3 +19,9 @@ spec:
         image: registry.digitalocean.com/kimschles/example-api:latest
         ports:
         - containerPort: 4000
+        securityContext:
+          readOnlyRootFilesystem: false
+          privileged: true
+          allowPrivilegeEscalation: true
+          runAsNonRoot: false
+          runAsUser: 0
